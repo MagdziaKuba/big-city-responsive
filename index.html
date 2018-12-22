@@ -12,14 +12,19 @@
 	<div id="content_page">
 		<header id="main_header">
 			<div id="logo"><span class="inclined_letters">b</span>anx</div>
-			<nav>
-				<ul id="menu">
-					 <li><a href="#">design</a></li>
-					 <li><a href="#">web design</a></li>
-					 <li><a href="#">graphic design</a></li>
-					 <li><a href="#">print design</a></li>
-					 <li><a href="#">video design</a></li>
+			<nav class="nav_Hamburger">
+				<ul id="menu" class="ul_hamburger close">
+					<li><a href="#">design</a></li>
+					<li><a href="#">web design</a></li>
+					<li><a href="#">graphic design</a></li>
+					<li><a href="#">print design</a></li>
+					<li><a href="#">video design</a></li>
 				</ul>
+				<button type="button" class="hamburger open" onclick="myFunction(this)">
+					<div class="dash dash_one"></div>
+					<div class="dash dash_two"></div>
+					<div class="dash dash_three"></div>
+				</button>
 			</nav>
 			<div id="main_section">
 				<div class="short_line"></div>
@@ -116,5 +121,12 @@
 			Copyright &nbsp;<time>2018</time>&nbsp; By Magda Kuba
 		</div>
 	</div>
+	
+<script>
+function myFunction(x) {
+  x.classList.toggle("change");
+}
+</script>
+<script type="text/javascript" src="src/silnik.js"></script>
 </body>
 </html>
