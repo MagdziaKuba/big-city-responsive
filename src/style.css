@@ -61,7 +61,9 @@ h1,h2,h3,h4,h5,h6{
 	color:black;
 	border-bottom: 2px solid #4f4d6a;
 }
-
+.hamburger{
+	visibility: hidden;
+}
 #main_section{
 	display: flex;
     flex-direction: column;
@@ -75,6 +77,9 @@ h1,h2,h3,h4,h5,h6{
 }
 #main_section > h1{
 	font-size: 90px;
+}
+.hamburger{
+	display: none;
 }
 .long_line{
 	background-color:white;
@@ -380,8 +385,73 @@ h1,h2,h3,h4,h5,h6{
 	left:50px;
 	font-size: 50px;
 }
-#menu{
+.nav_Hamburger{
+	width: 100%;
+	z-index: 2;
+}
+
+.ul_hamburger{
 	display: none;
+}
+.hamburger{
+	visibility: visible;
+	border:none;
+	background-color: transparent;
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	top:30px;
+	right: 30px;
+}
+.hamburger:hover{
+	background-color: grey;
+}
+.nav_Hamburger > .close li{
+	display: none;
+}
+.nav_Hamburger > .open > li{
+	display: block;
+}
+
+.nav_Hamburger > .ul_hamburger{
+	display: block;
+	background-color: grey;
+	position: relative;
+	top:-100px;
+}
+.nav_Hamburger > .ul_hamburger > li{
+	list-style-type: none;
+}
+.nav_Hamburger > .ul_hamburger > li > a{
+	text-decoration: none;
+	color: white;
+	font-size: 32px;
+	line-height: 50px;
+}
+.nav_Hamburger > .ul_hamburger > li > a:hover{
+	color: black;
+}
+.dash{
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	top:0px;
+	right: 0px;
+	background-color: white;
+	width: 50px;
+	height: 5px;
+	margin: 5px;
+}
+.change .dash_one{
+  -webkit-transform: rotate(-45deg) translate(-13px, 7px);
+  transform: rotate(-45deg) translate(-13px, 7px);
+}
+
+.change .dash_two{opacity: 0;}
+
+.change .dash_three{
+  -webkit-transform: rotate(45deg) translate(-14px, -8px);
+  transform: rotate(45deg) translate(-14px, -8px);
 }
 #main_section{
 	display: flex;
@@ -678,5 +748,5 @@ summary{
 }
 .inclined_letters{
 	font-style: italic;
-}*/
+}
 }
